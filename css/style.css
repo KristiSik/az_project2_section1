@@ -230,6 +230,42 @@ header {
     text-shadow: 4px 4px 4px #B3B5B4;
 }
 
+.section-2 {
+    margin-top: 50px;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+}
+
+.facial-sheet-with-circles-img {
+    background-image: url("../img/facial_sheet_with_circles.png");
+    background-size: contain;
+    width: 30vw;
+    height: 30vw;
+}
+
+.section-2-text {
+    margin-left: 4vw;
+    width: 35vw;
+    font-family: 'Calibri';
+}
+
+.section-2-text h2 {
+    font-size: 26px;
+    color: #535353;
+}
+
+.section-2-text p {
+    font-size: 15px;
+    color: #6d6d6d;
+}
+
 .first_block span{
     margin-left: 15px;
     margin-right: 15px;

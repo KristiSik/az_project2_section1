@@ -8,4 +8,18 @@ $(document).ready(function(){
     //     }
     // }
     $(".section-1-text").cycle("fade");
+    const refreshRate = 1000 / 60;
+    const maxXPosition = 4000;
+    let rect = $('.bubble');
+    let speedX = 1;
+    let positionX = 0;
+    window.setInterval(() => {
+        $('.bubble').each(function(){
+            positionX = positionX + speedX;
+            if (positionX > maxXPosition || positionX < 0) {
+                speedX = speedX * (-1);
+            }
+            $(this).css("left", positionX + 'px');
+        });
+    }, refreshRate);
 });
