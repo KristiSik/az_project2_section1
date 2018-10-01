@@ -2,6 +2,7 @@
 <head>
     <title>Face Semen</title>    
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -17,8 +18,25 @@
                 <li class="menu-separator"></li>
                 <li><a href="#">Shop<span class="icon bag-icon"></span></a></li>
                 <li class="menu-separator"></li>
-                <li><a href="#">Like Us<span class="icon heart-icon"></span></a></li>
+                <li><a href="#" class="dropdown-btn">Like Us<span class="icon heart-icon"></span></a></li>
             </ul>
+            <div class="dropdown-content">
+                <div class="dropdown-content-share-it">
+                    <div>Like us? Share with your friends!</div>
+                    <div class="share-it-icons">
+                        <a href="#" class="media-icon facebook-icon"></a>
+                        <a href="#" class="media-icon twitter-icon"></a>
+                        <a href="#" class="media-icon google-icon"></a>
+                        <a href="#" class="media-icon pinterest-icon"></a>
+                    </div>
+                </div>
+                <div class="dropdown-content-subscribe">
+                    <h2>Let's keep in touch</h2>
+                    <p>Be the first to know about our promotions, innovations and updates.</p>
+                    <input type="email" placeholder="your email address" id="email">
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
         </div>
     </div>
     <div></div>
@@ -77,6 +95,10 @@
             </div>
         </div>
     </div>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

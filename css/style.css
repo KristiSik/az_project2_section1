@@ -1,18 +1,19 @@
 body {
     height: 1000px;
     margin: 0;
+    font-family: 'Calibri';
 }
 
 .header {
-    padding: 12px;
+    padding: 12px 12px 8px 12px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     position: fixed;
+    border-bottom: 5px solid #f1fff1;
 }
 
 .menu {
-    margin-right: 40px;
     font-family: 'Calibri';
     font-size: 16px;
     text-decoration: none;
@@ -61,4 +62,102 @@ body {
 .heart-icon {
     padding: 32px;
     background-image: url("../img/heart.png");
+}
+
+.media-icon {
+    font-size: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding: 20px;
+    margin-right: 7px;
+    margin-top: 20px;
+}
+
+.media-icon:hover {
+    opacity: 0.9;
+}
+
+.facebook-icon {
+    background-image: url("../img/facebook_icon.png");
+}
+
+.twitter-icon {
+    background-image: url("../img/twitter_icon.png");
+}
+
+.google-icon {
+    background-image: url("../img/google_icon.png");
+}
+
+.pinterest-icon {
+    background-image: url("../img/pinterest_icon.png");
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 12px;
+    right: 24px;
+    position: absolute;
+    width: 295px;
+    height: 395px;
+    -webkit-box-shadow: -12px 19px 82px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: -12px 19px 82px -19px rgba(0,0,0,0.75);
+    box-shadow: -12px 19px 82px -19px rgba(0,0,0,0.75);
+}
+
+.dropdown-content-share-it {
+    background-color: #dff0f8;
+    padding: 20px 20px 30px 20px;
+}
+
+.share-it-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-content-subscribe {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 30px 15px;
+}
+
+.dropdown-content-subscribe h2 {
+    font-family: 'Fjalla One';
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+}
+
+.dropdown-content-subscribe p {
+    text-align: center;
+}
+
+.dropdown-content-subscribe input {
+    background-color: #e9eafe;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    outline: none;
+    margin-top: 12px;
+}
+
+.subscribe-btn {
+    background-color: #0898d3;
+    font-family: 'Fjalla One';
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 20px;
+    border: none;
+    margin: 30px 45px 0 45px;
+    outline: none;
+}
+
+.subscribe-btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
