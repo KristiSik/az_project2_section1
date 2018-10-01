@@ -4,13 +4,16 @@ body {
     font-family: 'Calibri';
 }
 
-.header {
+header {
     padding: 12px 12px 8px 12px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     position: fixed;
+    top: 0;
+    right: 0;
     border-bottom: 5px solid #f1fff1;
+    background-color: #ffffff;
 }
 
 .menu {
@@ -161,6 +164,18 @@ body {
     opacity: 0.9;
     cursor: pointer;
 }
+
+
+.section-1 {
+    margin-top: 40px;
+    background-image: url("../img/bg_header.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    width: 100%;
+    height: 800px;
+
+}
 .first_block span{
     margin-left: 15px;
     margin-right: 15px;
@@ -181,7 +196,7 @@ body {
     padding-right: 12px;
     background: #eafff0;
 }
-.third_block{
+.third_block {
     margin-left: 15px;
     margin-right: 15px;
     border: 1px solid;
