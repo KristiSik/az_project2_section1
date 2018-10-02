@@ -102,7 +102,7 @@ header {
 .dropdown-content {
     display: none;
     margin-top: 12px;
-    right: 24px;
+    right: 0;
     position: absolute;
     width: 295px;
     height: 395px;
