@@ -9,17 +9,40 @@ $(document).ready(function(){
     // }
     $(".section-1-text").cycle("fade");
     const refreshRate = 1000 / 60;
-    const maxXPosition = 4000;
-    let rect = $('.bubble');
-    let speedX = 1;
-    let positionX = 0;
+    var maxXPosition = $(".section-2").css("width");
+    var positionX = [];
+    var positionY = [];
+    var amplitude = [];
+    var frequency = [];
+    var startXPosition = $(".facial-sheet-with-circles-img").position().left + $(".facial-sheet-with-circles-img").width() * 0.6;
+    var startYPosition = $(".facial-sheet-with-circles-img").position().top + $(".facial-sheet-with-circles-img").height() * 0.4;
+    var speedX = 0.5;
+    for (var i = 0; i < 9; i++) {
+        positionX[i] = startXPosition + i * $(".section-2").width()/12;
+        positionY[i] = startYPosition + Math.random() * 0.7 * ($(".facial-sheet-with-circles-img").height()/2);
+        amplitude[i] = Math.random()*8 + 5;
+        frequency[i] = Math.random()*0.03 + 0.01;
+        console.log(positionX[i]);
+    }
+    maxXPosition = maxXPosition.substr(0, maxXPosition.length - 2);
+    $(".bubble").css("left", 0);
     window.setInterval(() => {
-        $('.bubble').each(function(){
-            positionX = positionX + speedX;
-            if (positionX > maxXPosition || positionX < 0) {
-                speedX = speedX * (-1);
+        var newPosX, newPosY;
+        $('.bubble').each(function(index){
+            if ($(this).css("display") == "none") {
+                $(this).show();
             }
-            $(this).css("left", positionX + 'px');
+            newPosX = positionX[index] + speedX;
+            if (newPosX > maxXPosition) {
+                newPosX = startXPosition;
+            }
+            positionX[index] = newPosX;
+            newPosY = positionY[index] + amplitude[index] * Math.sin(frequency[index] * positionX[index]);
+            $(this).css("transform", "translate(" + positionX[index] + "px, " + newPosY + "px)");
         });
     }, refreshRate);
+    $(".slider").slick({
+        dots: true,
+        centerPadding :"50px"
+    });
 });
