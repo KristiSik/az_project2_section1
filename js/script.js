@@ -22,7 +22,6 @@ $(document).ready(function(){
         positionY[i] = startYPosition + Math.random() * 0.7 * ($(".facial-sheet-with-circles-img").height()/2);
         amplitude[i] = Math.random()*8 + 5;
         frequency[i] = Math.random()*0.03 + 0.01;
-        console.log(positionX[i]);
     }
     maxXPosition = maxXPosition.substr(0, maxXPosition.length - 2);
     $(".bubble").css("left", 0);
@@ -45,4 +44,14 @@ $(document).ready(function(){
         dots: true,
         centerPadding :"50px"
     });
+    $('.video').parent().click(function () {
+        if($(this).children(".video").get(0).paused){
+            $(this).children(".video").get(0).play();   
+            $(this).children(".playpause").fadeOut();
+        } else {       
+            $(this).children(".video").get(0).pause();
+            $(this).children(".playpause").fadeIn();
+        }
+    });
+    $('.single-item').slick();
 });
